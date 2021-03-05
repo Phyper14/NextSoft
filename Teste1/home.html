@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Teste1</title>
+</head>
+
+<body>
+    <form action="" class="formulario">
+        <h2>Cadastre-se</h2>
+        <p>Informações Pessoais</p>
+        <div class="field">
+            <label for="Nome">Seu Nome</label>
+            <input type="text" class="nome" required>
+        </div>
+        <div class="field">
+            <label for="cpf">CPF</label>
+            <input type="text" class="cpf" required minlength="11" maxlength="11" placeholder="000.000.000-00">
+        </div>
+
+        <p>Informações de Contato</p>
+        <div class="field">
+            <label for="Email">E-mail</label>
+            <input type="email" class="email" required>
+        </div>
+        <div class="field">
+            <label for="Telefone">Telefoone</label>
+            <input type="text" class="telefone" required minlength="11" maxlength="15" placeholder="(99) 99999-9999">
+        </div>
+
+        <p>Endereços</p>
+        <div class="enderecos">
+            <div class="item">
+                <div class="field">
+                    <label for="tipocep">Endereço</label>
+                    <select id="tipocep">
+                    <option value="residencial">Residencial</option>
+                    <option value="comercial">Comercial</option>
+                    <option value="entrega">Entrega</option>
+                    <option value="geral">Geral</option>
+                </select>
+                </div>
+                <div class="field">
+                    <label for="cep">CEP</label>
+                    <input type="text" class="cep" id="1" required minlength="9" maxlength="9" placeholder="00000-000">
+                </div>
+                <div class="field">
+                    <label for="uf">Estado</label>
+                    <select class="uf 1">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                </div>
+                <div class="field">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="cidade 1" required>
+                </div>
+                <div class="field">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" class="bairro 1" required>
+                </div>
+                <div class="field">
+                    <label for="rua">Rua</label>
+                    <input type="text" class="rua 1" required>
+                </div>
+                <div class="fiel">
+                    <label for="numero">Número</label>
+                    <input type="text" class="numero 1" required>
+                </div>
+                <div class="field">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" class="complemento 1" placeholder="OPICIONAL">
+                </div>
+            </div>
+        </div>
+        <div class="botoes">
+            <input type="button" value="Adicionar Endereço" class="addendereco"></input>
+            <input type="button" value="Remover Endereço" class="removeendereco"></input>
+        </div>
+        <input type="submit" class="action">
+    </form>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="Scripts/cepapi.js"></script>
+<script type="text/javascript" src="Scripts/main.js"></script>
+
+</html>

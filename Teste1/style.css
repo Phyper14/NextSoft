@@ -1,0 +1,69 @@
+body {
+    padding: 30px;
+    border: 1px solid lightgreen;
+}
+
+.formulario h2,
+p {
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.field {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.field label {
+    padding-left: 10px;
+    font-size: 1.1em;
+    display: block;
+    width: 100%;
+}
+
+input[type=text],
+input[type=email],
+select {
+    width: 100%;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid lightsalmon;
+    outline: none;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+select:focus {
+    border: 1px solid blue;
+}
+
+input[type=submit] {
+    display: block;
+    background-color: #ccc;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addendereco,
+.removeendereco {
+    background-color: #ccc;
+    height: 35px;
+    border: 1px solid lightsalmon;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 1px;
+}
