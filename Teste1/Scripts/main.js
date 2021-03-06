@@ -4,7 +4,6 @@ const endereco = document.querySelector('.enderecos');
 let index = 2;
 
 function addEndereco() {
-    let id = `#${index}`;
     const item = document.createElement('div');
     const dentro = `
     <div class="field">
@@ -18,7 +17,7 @@ function addEndereco() {
                 </div>
                 <div class="field">
                     <label for="cep">CEP</label>
-                    <input type="text" class="cep" id="${index}" required minlength="9" maxlength="9" placeholder="00000-000">
+                    <input type="text" class="cep" id="${index}" onfocusout="buscaCep(this)" required minlength="9" maxlength="9" placeholder="00000-000">
                 </div>
                 <div class="field">
                     <label for="uf">Estado</label>

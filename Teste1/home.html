@@ -35,16 +35,16 @@
             <div class="item">
                 <div class="field">
                     <label for="tipocep">Endereço</label>
-                    <select id="tipocep">
-                    <option value="residencial">Residencial</option>
-                    <option value="comercial">Comercial</option>
-                    <option value="entrega">Entrega</option>
-                    <option value="geral">Geral</option>
-                </select>
+                    <select class="tipocep">
+                        <option value="residencial">Residencial</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="entrega">Entrega</option>
+                        <option value="geral">Geral</option>
+                    </select>
                 </div>
                 <div class="field">
                     <label for="cep">CEP</label>
-                    <input type="text" class="cep" id="1" required minlength="9" maxlength="9" placeholder="00000-000">
+                    <input type="text" class="cep" id="1" onfocusout="buscaCep(this)" required minlength="9" maxlength="9" placeholder="00000-000">
                 </div>
                 <div class="field">
                     <label for="uf">Estado</label>
@@ -107,6 +107,7 @@
         <input type="submit" class="action">
     </form>
 </body>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="Scripts/cepapi.js"></script>
 <script type="text/javascript" src="Scripts/main.js"></script>
