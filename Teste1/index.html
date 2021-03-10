@@ -8,26 +8,26 @@
 </head>
 
 <body>
-    <form action="" class="formulario">
+    <form action="Scripts/cadastro.php" method="POST" class="formulario">
         <h2>Cadastre-se</h2>
         <p>Informações Pessoais</p>
         <div class="field">
             <label for="Nome">Seu Nome</label>
-            <input type="text" class="nome" required>
+            <input type="text" class="nome" name="nome" required>
         </div>
         <div class="field">
             <label for="cpf">CPF</label>
-            <input type="text" class="cpf" required minlength="11" maxlength="11" placeholder="000.000.000-00">
+            <input type="text" class="cpf" name="cpf" required minlength="11" maxlength="11" placeholder="000.000.000-00">
         </div>
 
         <p>Informações de Contato</p>
         <div class="field">
             <label for="Email">E-mail</label>
-            <input type="email" class="email" required>
+            <input type="email" class="email" name="email" required>
         </div>
         <div class="field">
             <label for="Telefone">Telefoone</label>
-            <input type="text" class="telefone" required minlength="11" maxlength="15" placeholder="(99) 99999-9999">
+            <input type="text" class="telefone" name="telefone" required minlength="11" maxlength="15" placeholder="(99) 99999-9999">
         </div>
 
         <p>Endereços</p>
@@ -35,7 +35,7 @@
             <div class="item">
                 <div class="field">
                     <label for="tipocep">Endereço</label>
-                    <select class="tipocep">
+                    <select class="tipocep" name="tipocep[]">
                         <option value="residencial">Residencial</option>
                         <option value="comercial">Comercial</option>
                         <option value="entrega">Entrega</option>
@@ -44,11 +44,11 @@
                 </div>
                 <div class="field">
                     <label for="cep">CEP</label>
-                    <input type="text" class="cep" id="1" onfocusout="buscaCep(this)" required minlength="9" maxlength="9" placeholder="00000-000">
+                    <input type="text" class="cep" id="1" name="cep[]" onfocusout="buscaCep(this)" required minlength="9" maxlength="9" placeholder="00000-000">
                 </div>
                 <div class="field">
                     <label for="uf">Estado</label>
-                    <select class="uf 1">
+                    <select class="uf 1" name="uf[]">
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -80,23 +80,23 @@
                 </div>
                 <div class="field">
                     <label for="cidade">Cidade</label>
-                    <input type="text" class="cidade 1" required>
+                    <input type="text" class="cidade 1" name="cidade[]" required>
                 </div>
                 <div class="field">
                     <label for="bairro">Bairro</label>
-                    <input type="text" class="bairro 1" required>
+                    <input type="text" class="bairro 1" name="bairro[]" required>
                 </div>
                 <div class="field">
                     <label for="rua">Rua</label>
-                    <input type="text" class="rua 1" required>
+                    <input type="text" class="rua 1" name="rua[]" required>
                 </div>
                 <div class="fiel">
                     <label for="numero">Número</label>
-                    <input type="text" class="numero 1" required>
+                    <input type="text" class="numero 1" name="numero[]" required>
                 </div>
                 <div class="field">
                     <label for="complemento">Complemento</label>
-                    <input type="text" class="complemento 1" placeholder="OPICIONAL">
+                    <input type="text" class="complemento 1" name="complemento[]" placeholder="OPICIONAL">
                 </div>
             </div>
         </div>

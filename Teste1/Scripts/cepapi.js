@@ -1,6 +1,3 @@
-//Código retirado de https://velhobit.com.br/programacao/carregando-cep-cidades-dinamicamente.html
-//Usaddo com JQuery para autocompletar o preenchimento do endereço com o cep
-
 function buscaCep(cep) {
     let id = cep.id;
 
