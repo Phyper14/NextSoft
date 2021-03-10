@@ -29,17 +29,23 @@ $cpfExiste  = pg_num_rows($cpfProcura);
 $query = "insert into teste3 (nome, cpf, email, telefone) values ('${nome}','${cpf}','${email}','${telefone}') returning id";
 $insere = pg_query($conexao, $query) or die ('Deu Merda cambada');
 $idBusca = pg_query($conexao, 'select lastval()');
-$idlinha = pg_fetch_row($idBusca);
-$id = $idlinha[0];
+$idLinha = pg_fetch_row($idBusca);
+$id = $idLinha[0];
+$tamanho = count($cep);
 
+echo $tamanho;
 echo $id;
-if ($id > 0){
-    for($x = 0; $x < $cep.count(); $x++){
-        echo 'ola';
-        $insereCep = pg_query($conexao, `insert into testeenderecos (tipo, cep, estado, cidade, bairro, rua, numero, complemento, teste_id) values ('$tipocep[$x]','$cep[$x]','$uf[$x]','$cidade[$x]','$bairro[$x]','$rua[$x]','$numero[$x]','$complemento[$x]','${id})`) or die ('Oque aconteceu aqui');
-    }
-    echo 'ual';
+
+for($x = 0; $x < $tamanho; $x++){
+    echo 'ola';
+    $enderecoQuery = "insert into testeenderecos (tipo, cep, estado, cidade, bairro, rua, numero, complemento, teste_id) values ('$tipocep[$x]','$cep[$x]','$uf[$x]','$cidade[$x]','$bairro[$x]','$rua[$x]','$numero[$x]','$complemento[$x]','${id}')";
+    echo '              ';
+    echo $id;
+    echo pg_last_error($conexao);
+    $insereCep = pg_query($conexao, $enderecoQuery) or die ('Deu muito ruim');
+    echo $enderecoQuery;
 }
+echo 'ual';
 
 echo 'sucesso';
 ?>
