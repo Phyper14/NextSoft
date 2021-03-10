@@ -43,7 +43,6 @@ for($x = 0; $x < $tamanho; $x++){
     echo nl2br("Valor de x: ${x} \n");
     echo nl2br("${enderecoQuery} \n");
 }
-echo 'ual';
 
 echo 'sucesso';
 ?>
