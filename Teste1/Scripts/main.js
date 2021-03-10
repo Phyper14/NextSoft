@@ -2,7 +2,7 @@ const btnAddEndereco = document.querySelector('.addendereco');
 const btnRemoveEndereco = document.querySelector('.removeendereco');
 const endereco = document.querySelector('.enderecos');
 let index = 2;
-let ident = 1;
+var ident = 1;
 
 function addEndereco() {
     const item = document.createElement('div');
@@ -18,11 +18,11 @@ function addEndereco() {
                 </div>
                 <div class="field">
                     <label for="cep">CEP</label>
-                    <input type="text" class="cep" id="${index}" name="cep[${ident - 1}]" onfocusout="buscaCep(this)" required minlength="9" maxlength="9" placeholder="00000-000">
+                    <input type="text" class="cep" id="${index}" name="cep[${ident}]" onfocusout="buscaCep(this)" required minlength="9" maxlength="9" placeholder="00000-000">
                 </div>
                 <div class="field">
                     <label for="uf">Estado</label>
-                    <select class="uf ${index}" name="uf[${ident - 1}]">
+                    <select class="uf ${index}" name="uf[${ident}]">
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
