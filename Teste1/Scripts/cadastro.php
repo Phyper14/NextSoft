@@ -33,17 +33,15 @@ $idLinha = pg_fetch_row($idBusca);
 $id = $idLinha[0];
 $tamanho = count($cep);
 
-echo $tamanho;
-echo $id;
+echo "Numero de CEPs: ${tamanho} \n\n";
+echo "Numero do id agora: ${id} \n\n";
 
 for($x = 0; $x < $tamanho; $x++){
-    echo 'ola';
     $enderecoQuery = "insert into testeenderecos (tipo, cep, estado, cidade, bairro, rua, numero, complemento, teste_id) values ('$tipocep[$x]','$cep[$x]','$uf[$x]','$cidade[$x]','$bairro[$x]','$rua[$x]','$numero[$x]','$complemento[$x]','${id}')";
-    echo '              ';
-    echo $id;
     echo pg_last_error($conexao);
     $insereCep = pg_query($conexao, $enderecoQuery) or die ('Deu muito ruim');
-    echo $enderecoQuery;
+    echo nl2br("Valor de x: ${x} \n");
+    echo nl2br("${enderecoQuery} \n");
 }
 echo 'ual';
 
