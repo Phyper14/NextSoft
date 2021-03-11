@@ -12,21 +12,14 @@ function buscaCep(cep) {
             console.log("sucesso");
             console.log(`O valor do id ta em ${id} na resposta`);
             console.log(`.rua#${id}`);
-            $(`.rua.${id}`).val(resposta.logradouro);
-            $(`.complemento.${id}`).val(resposta.complemento);
-            $(`.bairro.${id}`).val(resposta.bairro);
-            $(`.cidade.${id}`).val(resposta.localidade);
-            $(`.uf.${id}`).val(resposta.uf);
+
+            $(`.rua.${id}`).val(removeChar(resposta.logradouro));
+            $(`.complemento.${id}`).val(removeChar(resposta.complemento));
+            $(`.bairro.${id}`).val(removeChar(resposta.bairro));
+            $(`.cidade.${id}`).val(removeChar(resposta.localidade));
+            $(`.uf.${id}`).val(removeChar(resposta.uf));
 
             $(`.numero.${id}`).focus();
         }
     });
 }
-
-
-$(".cep").focusout(function() {
-    let id = $(this).prop('id');
-    console.log("ola");
-    console.log(`O id tá em ${index - 1} no começo`);
-
-});

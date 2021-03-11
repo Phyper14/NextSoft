@@ -17,7 +17,7 @@
         </div>
         <div class="field">
             <label for="cpf">CPF</label>
-            <input type="text" class="cpf" name="cpf" required minlength="11" maxlength="11" placeholder="000.000.000-00">
+            <input type="text" class="cpf" name="cpf" required minlength="14" maxlength="14" placeholder="000.000.000-00">
         </div>
 
         <p>Informações de Contato</p>
@@ -26,8 +26,8 @@
             <input type="email" class="email" name="email" required>
         </div>
         <div class="field">
-            <label for="Telefone">Telefoone</label>
-            <input type="text" class="telefone" name="telefone" required minlength="11" maxlength="15" placeholder="(99) 99999-9999">
+            <label for="Telefone">Telefone</label>
+            <input type="text" class="telefone" name="telefone" required minlength="14" maxlength="16" placeholder="(99) 99999-9999">
         </div>
 
         <p>Endereços</p>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="field">
                     <label for="cep">CEP</label>
-                    <input type="text" class="cep" id="1" name="cep[0]" onfocusout="buscaCep(this)" required minlength="9" maxlength="9" placeholder="00000-000">
+                    <input type="text" class="cep" id="1" name="cep[0]" onfocus="cepMask(this)" onfocusout="buscaCep(this)" required minlength="9" maxlength="9" placeholder="00000-000">
                 </div>
                 <div class="field">
                     <label for="uf">Estado</label>
@@ -90,7 +90,7 @@
                     <label for="rua">Rua</label>
                     <input type="text" class="rua 1" name="rua[0]" required>
                 </div>
-                <div class="fiel">
+                <div class="field">
                     <label for="numero">Número</label>
                     <input type="text" class="numero 1" name="numero[0]" required>
                 </div>
@@ -109,6 +109,8 @@
 </body>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.mask.js"></script>
+<script type="text/javascript" src="Scripts/masks.js"></script>
 <script type="text/javascript" src="Scripts/cepapi.js"></script>
 <script type="text/javascript" src="Scripts/main.js"></script>
 

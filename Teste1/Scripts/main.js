@@ -18,7 +18,7 @@ function addEndereco() {
                 </div>
                 <div class="field">
                     <label for="cep">CEP</label>
-                    <input type="text" class="cep" id="${index}" name="cep[${ident}]" onfocusout="buscaCep(this)" required minlength="9" maxlength="9" placeholder="00000-000">
+                    <input type="text" class="cep" id="${index}" name="cep[${ident}]" onfocus="cepMask(this)" onfocusout="buscaCep(this)" required minlength="9" maxlength="9" placeholder="00000-000">
                 </div>
                 <div class="field">
                     <label for="uf">Estado</label>
@@ -64,7 +64,7 @@ function addEndereco() {
                     <label for="rua">Rua</label>
                     <input type="text" class="rua ${index}" name="rua[${ident}]" required>
                 </div>
-                <div class="fiel">
+                <div class="field">
                     <label for="numero">Número</label>
                     <input type="text" class="numero ${index}" name="numero[${ident}]" required>
                 </div>
