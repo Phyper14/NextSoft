@@ -1,3 +1,6 @@
+//Script para adicionar máscaras nos inputs para evitar a quebra do banco de dados e para maior organização do mesmo
+
+
 const telefone = document.querySelector('.telefone');
 const cpf = document.querySelector('.cpf');
 const rua = document.getElementsByClassName('.rua');
@@ -25,7 +28,7 @@ function cpfMask(cpf) {
 
 function removeChar(texto) {
     let removido = texto.replace(/'/g, ' ');
-    texto = removido;
+    texto = removido.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     return texto;
 }
 
